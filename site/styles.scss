@@ -1,0 +1,472 @@
+//Colors
+$bgColor: #4E4E50;
+
+$heroHeader: rgb(65,64,66);
+
+$heroTextColor: $heroHeader;
+
+$blue1: #283b52;
+$blue2: #85a0bd;
+$bluegradstart: $blue1;
+$bluegradend: #172536;
+$grey: #999999;
+$white: #fff;
+$headerColor: $white;
+$headerLightColor: lighten($headerColor, 10%);
+$buttonColor1: $headerColor;
+$buttonColor2: $headerLightColor;
+$serviceHeroHeight: 405px;
+
+$red: rgb(191, 32, 37);
+
+$borderbottom: rgba($white, 0.4);
+//Sizes
+$wrapper-padding: 45px;
+
+@charset "UTF-8";
+
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@font-face {
+  font-family: "icon-font-1";
+  src: url("/site/fonts/icon-font-1.eot");
+  src: url("/site/fonts/icon-font-1.eot?#iefix") format("embedded-opentype"),
+  url("/site/fonts/icon-font-1.woff") format("woff"),
+  url("/site/fonts/icon-font-1.ttf") format("truetype"),
+  url("/site/fonts/icon-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "icon-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+  content: "a";
+}
+
+.icon-brochure:before {
+  content: "b";
+}
+
+.icon-pricesheet:before {
+  content: "c";
+}
+
+@font-face {
+  font-family: 'brandon_grotesquebold';
+  src: url('/site/fonts/brandon_bld-webfont.eot');
+  src: url('/site/fonts/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/site/fonts/brandon_bld-webfont.woff2') format('woff2'),
+  url('/site/fonts/brandon_bld-webfont.woff') format('woff'),
+  url('/site/fonts/brandon_bld-webfont.ttf') format('truetype'),
+  url('/site/fonts/brandon_bld-webfont.svg#brandon_grotesquebold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+%sansfont {
+  font-family: 'brandon_grotesquebold';
+}
+
+@mixin clearFix {
+  &:after {
+    content: "";
+    display: block;
+    zoom: 1;
+    clear: both;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Merriweather', serif;
+  color: $grey;
+  &, * {
+    box-sizing: border-box;
+  }
+}
+
+a:link, a:hover, a:visited {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+  text-transform: uppercase;
+  @extend %sansfont;
+  font-size: 0.7em;
+  color: $headerColor;
+  letter-spacing: 1px;
+}
+
+.wrapper {
+  height: 100%;
+  @include clearFix;
+}
+
+body * {
+  word-wrap: break-word;
+  text-wrap: normal;
+  line-break: strict;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+//Hidden Classes
+.hide-mobile {
+  display: none;
+}
+
+//Buttons
+.button {
+  vertical-align: middle;
+  &.block-mobile {
+    display: block;
+    max-width: 300px;
+  }
+  &.pure {
+    @extend %sansfont;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    color: $white;
+    vertical-align: middle;
+    font-size: .7em;
+    letter-spacing: 2px;
+    border: 1px $white solid;
+    @include transition(all .5s ease);
+
+    &.bold {
+      color: $buttonColor1;
+      border-color: $buttonColor1;
+      &:hover {
+        background-color: $buttonColor1;
+        color: $red;
+      }
+    }
+    &.light {
+      color: $buttonColor2;
+      border-color: $buttonColor2;
+      &:hover {
+        background-color: $buttonColor2;
+        color: $white;
+      }
+    }
+    .icon {
+      float: right;
+      font-size: 1.1em;
+      &:before {
+        line-height: 1.1;
+        vertical-align: middle;
+      }
+    }
+  }
+  span.label {
+    position: relative;
+    top: 2px;
+  }
+}
+
+//Typography
+h1 {
+  @extend %sansfont;
+  color: $headerColor;
+  text-transform: uppercase;
+  font-size: 1.7em;
+}
+
+//Layout
+.logo {
+  padding: 100px $wrapper-padding;
+  background-color: $white;
+  min-height: 100px;
+  text-align: center;
+  img {
+    max-width: 200px;
+  }
+  .hero {
+    margin-left: -$wrapper-padding;
+    background-color: $white;
+    padding-top: 95px;
+    padding-bottom: 35px;
+    text-align: left;
+    color: $blue2;
+    .hero-header {
+      position: relative;
+      padding-bottom: 25px;
+      padding-left: $wrapper-padding;
+      color: $heroHeader;
+      .border-bottom {
+        @extend .hide-past-mobile;
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        padding: 10px 0px;
+        border-bottom: 1px solid $headerColor;
+      }
+    }
+    .hero-text {
+      padding-left: $wrapper-padding;
+      color: $heroTextColor;
+    }
+  }
+}
+
+.info {
+  padding: $wrapper-padding;
+  background-color: $bgColor;
+
+  .service-action-wrapper {
+    margin: 0px -$wrapper-padding;
+    padding: 25px $wrapper-padding;
+    .services {
+      margin-bottom: 65px;
+      li {
+        font-style: italic;
+        line-height: 2.2;
+        font-size: 0.8em;
+        color: $white;
+      }
+    }
+    .actions {
+      .button {
+        margin: 25px 0;
+      }
+    }
+    .address {
+      margin-top: 35px;
+      min-height: 200px;
+      address {
+        color: $headerColor;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+
+  }
+  %fade {
+    transition: opacity 1s ease;
+    opacity: 0;
+    &.shown {
+      opacity: 1;
+    }
+  }
+  [data-fadein] {
+    @extend %fade;
+  }
+
+  html, body {
+    overflow-y: hidden;
+  }
+  .hide-past-mobile {
+    display: none !important;
+  }
+  .hide-mobile {
+    display: block;
+  }
+  .button {
+    &.block-mobile {
+      display: inline-block;
+    }
+
+    &.pure.light {
+      color: $white;
+      border-color: $white;
+      &:hover {
+        background-color: $white;
+        color: $buttonColor1;
+      }
+    }
+  }
+  .logo {
+    opacity: 1;
+    padding: 0;
+    background-color: $white;
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+    .logo-link {
+      display: block;
+      float: left;
+      max-width: 330px;
+      padding: 55px 45px;
+      img {
+        width: 100%;
+      }
+    }
+    .hero {
+      max-width: 386px;
+      padding-bottom: 15px;
+      padding-top: 0px;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      min-height: $serviceHeroHeight;
+      .hero-header {
+        padding-left: $wrapper-padding;
+        border: none;
+        font-size: 40px;
+        padding-top: 10px;
+        margin-top:0px;
+        padding-bottom: 50px;
+        color: $heroHeader;
+        line-height: 1em;
+        letter-spacing: 2px;
+        border-bottom: 1px $red solid;
+      }
+      .hero-text {
+        padding-left: $wrapper-padding;
+        line-height: 1.5;
+        color: $heroTextColor;
+      }
+    }
+  }
+  .info {
+    height: 100%;
+    width: 50%;
+    float: right;
+    position: relative;
+    padding: 0px;
+    background-image: url('/site/background.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .service-action-wrapper {
+      min-height: $serviceHeroHeight;
+      text-align: left;
+      padding: 0;
+      padding-left: $wrapper-padding;
+      margin: 0;
+      background: transparent;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      padding-bottom: 25px;
+      .address {
+        margin-top: 0px;
+        min-height: 10px;
+        color: $white !important;
+        font-size: 1em;
+        padding-top: 10px;
+        p {
+          display: inline;
+          vertical-align: middle;
+          color: $white !important;
+          &:after {
+            font-size: 2.2em;
+            line-height: .1em;
+            content: " \00b7";
+            vertical-align: sub;
+            display: inline;
+          }
+          &:last-child {
+            &:after {
+              display: none;
+            }
+          }
+
+        }
+      }
+      .services, .actions {
+        padding-left: 0px;
+      }
+      .services {
+        text-align: left;
+        margin-bottom: 0;
+        padding-bottom: 35px;
+
+        border-bottom: 1px $red solid;
+        h1 {
+          font-size: 1.6em;
+          margin-bottom: 20px;
+          margin-top: 0px;
+        }
+        .columns {
+          overflow: hidden;
+          width: 100%;
+          -moz-column-count: 3;
+          -moz-column-gap: 15px;
+          -webkit-column-count: 3;
+          -webkit-column-gap: 15px;
+          column-count: 3;
+          column-gap: 15px;
+          p {
+            font-style: italic;
+            display: block;
+            margin: 0;
+            color: $white;
+            text-align: left;
+            line-height: 2.2;
+            font-size: .8em;
+            a, a:visited, a:hover {
+              color: $white;
+            }
+          }
+
+        }
+      }
+      .actions {
+        margin-top: 10px;
+        .button {
+          padding-left: 9px;
+          padding-right: 9px;
+          max-width: 250px;
+          width: 33%;
+          margin-bottom: 15px;
+          &.smaller{
+            width: 150px;
+          }
+        }
+        .button + .button {
+          margin-left: 9px;
+        }
+      }
+    }
+
+  }
+}

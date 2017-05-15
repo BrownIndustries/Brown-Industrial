@@ -1,0 +1,26 @@
+{
+  "name": "tent.io-connect",
+  "version": "0.0.1",
+  "authors": [
+    "Austin Adams <austin@farmingtonwebdesign.net>"
+  ],
+  "description": "App connection to tent.io",
+  "main": "index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "Hover": "~2.0.2",
+    "ngtoast": "~1.5.4",
+    "angular-schema-form": "~0.8.4"
+  },
+  "resolutions": {
+    "angular": "~1.4.3"
+  }
+}

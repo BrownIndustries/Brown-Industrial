@@ -1,0 +1,18 @@
+storage1:
+  name: public
+  type: nfs
+web1:
+  network_dirs:
+    storage1:
+      - site/cache
+      - content
+build:
+  build_hook_timeout: 600
+  exec:
+      - "composer install --no-interaction"
+      - "mkdir site/cache"
+      - "chmod 700 site/cache"
+  lib_dir: vendor
+  after_exec:
+    - "cat vendor/composer/autoload_psr4.php"
+    - "cd app/client/ && npm install && npm install bower && ./node_modules/.bin/bower install"

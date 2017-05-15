@@ -1,0 +1,14 @@
+{
+    "require": {
+        "twig/twig": "^1.18",
+        "league/flysystem": "^1.0",
+        "vlucas/phpdotenv": "^2.0",
+        "league/route": "^1.1",
+        "firebase/php-jwt": "^2.2"
+    },
+  "autoload":{
+    "psr-4":{
+      "AppServer\\": "app/server"
+    }
+  }
+}

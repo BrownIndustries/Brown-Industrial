@@ -1,0 +1,70 @@
+{
+  "schema": {
+    "type": "object",
+    "title": "Website Content ",
+    "properties": {
+      "title": {
+        "title": "Title",
+        "type": "string"
+      },
+      "heroHeader": {
+        "title": "Hero Header",
+        "type": "string"
+      },
+      "heroText": {
+        "title": "Hero Text",
+        "type": "string"
+      },
+      "addressLine": {
+        "title": "Address Line",
+        "type": "string"
+      },
+      "citySt": {
+        "title": "City & State",
+        "type": "string"
+      },
+      "phoneNumber": {
+        "title": "Phone Number",
+        "type": "string"
+      },
+      "contactButtonText": {
+        "title": "Contact Button Text",
+        "type": "string"
+      },
+      "contactButtonLink": {
+        "title": "Contact Button Link",
+        "type": "string"
+      },
+      "brochureButtonLink": {
+        "title": "Brochure Button Link",
+        "type": "string"
+      },
+      "brochureButtonText": {
+        "title": "Brochure Button Text",
+        "type": "string"
+      },
+      "priceSheetButtonLink": {
+        "title": "Price Sheet Button Link",
+        "type": "string"
+      },
+      "priceSheetButtonText": {
+        "title": "Price Sheet Button Text",
+        "type": "string"
+      },
+      "servicesHeader": {
+        "title": "Service Header",
+        "type": "string"
+      },
+      "services": {
+        "title": "Services",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "form": [
+    "*"
+  ]
+}
