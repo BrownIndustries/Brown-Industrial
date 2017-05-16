@@ -1,62 +1,8 @@
-<!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-    <link href="{{asset_path}}/styles.css" rel="stylesheet">
-    <title>{{title}}</title>
+<head>
+<meta http-equiv="refresh" content="2;url=http://brown-ind.com" />
+
 </head>
 <body>
-{% autoescape false %}
-<div class="wrapper">
-    <section class="logo">
-
-        <a href="/" class="logo-link"><img src="{{asset_path}}/logo.png" data-fadein></a>
-
-        <div class="hero" data-fadein>
-            <h1 class="hero-header">
-                {{heroHeader}}
-                <div class="border-bottom"></div>
-            </h1>
-            <p class="hero-text" data-fadein>
-                {{heroText}}
-            </p>
-        </div>
-    </section>
-    <section class="info">
-        <div class="service-action-wrapper" data-fadein>
-            <div class="services">
-                <h1>{{servicesHeader}}</h1>
-                <div class="columns">
-                    {% for item in services %}
-                    <p>{{item}}</p>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="actions">
-                <a class="button pure bold block-mobile" href="{{contactButtonLink}}">
-                    <span class="label">{{contactButtonText}}</span>
-                    <span class="icon icon-arrow"></span>
-                </a>
-                <a class="button pure bold block-mobile" href="{{brochureButtonLink}}">
-                    <span class="label">{{brochureButtonText}}</span>
-                    <span class="icon icon-brochure"></span>
-                </a>
-            </div>
-            <div class="address">
-                <address>
-                    <p>{{addressLine}}</p>
-
-                    <p>{{citySt}}</p>
-
-                    <p>{{phoneNumber}}</p>
-                </address>
-            </div>
-        </div>
-    </section>
-</div>
-<script src="{{asset_path}}/script.js"></script>
 </body>
-{% endautoescape %}
 </html>
