@@ -1,7 +1,7 @@
 @font-face {
   font-family: "icon-font-1";
-  src: url("fonts/icon-font-1.eot");
-  src: url("fonts/icon-font-1.eot?#iefix") format("embedded-opentype"), url("fonts/icon-font-1.woff") format("woff"), url("fonts/icon-font-1.ttf") format("truetype"), url("fonts/icon-font-1.svg#untitled-font-1") format("svg");
+  src: url("/fonts/icon-font-1.eot");
+  src: url("/fonts/icon-font-1.eot?#iefix") format("embedded-opentype"), url("/fonts/icon-font-1.woff") format("woff"), url("/fonts/icon-font-1.ttf") format("truetype"), url("/fonts/icon-font-1.svg#untitled-font-1") format("svg");
   font-weight: normal;
   font-style: normal; }
 [data-icon]:before {
@@ -39,8 +39,8 @@
 
 @font-face {
   font-family: 'brandon_grotesquebold';
-  src: url("fonts/brandon_bld-webfont.eot");
-  src: url("fonts/brandon_bld-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/brandon_bld-webfont.woff2") format("woff2"), url("fonts/brandon_bld-webfont.woff") format("woff"), url("fonts/brandon_bld-webfont.ttf") format("truetype"), url("fonts/brandon_bld-webfont.svg#brandon_grotesquebold") format("svg");
+  src: url("/fonts/brandon_bld-webfont.eot");
+  src: url("/fonts/brandon_bld-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/brandon_bld-webfont.woff2") format("woff2"), url("/fonts/brandon_bld-webfont.woff") format("woff"), url("/fonts/brandon_bld-webfont.ttf") format("truetype"), url("/fonts/brandon_bld-webfont.svg#brandon_grotesquebold") format("svg");
   font-weight: normal;
   font-style: normal; }
 address, .button.pure, h1 {
@@ -255,7 +255,7 @@ h1 {
     float: right;
     position: relative;
     padding: 0px;
-    background-image: url("background.png");
+    background-image: url("/background.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover; }
