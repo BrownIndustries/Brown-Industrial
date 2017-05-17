@@ -255,7 +255,7 @@ h1 {
     float: right;
     position: relative;
     padding: 0px;
-    background-image: url("/background.png");
+    background-image: url("background.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover; }
